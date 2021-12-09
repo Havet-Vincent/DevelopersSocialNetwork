@@ -1,0 +1,16 @@
+{
+    "name": "vincent/developers-social-network",
+    "description": "Réseau social pour développeurs pour lier des liens d'amitié, échanger des codes sources, obtenir de l'aide etc...",
+    "autoload": {
+        "psr-4": {
+            "DevelopersSocialNetwork\\": "src/DevelopersSocialNetwork"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vincent Havet",
+            "email": "vhavet@gmail.com"
+        }
+    ],
+    "require": {}
+}

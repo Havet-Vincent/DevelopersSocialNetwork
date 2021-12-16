@@ -1,0 +1,26 @@
+services:
+  php-fpm:
+    build: 
+      context: ./php-fpm
+      args: 
+        PHP_VERSION: ${PHP_VERSION}
+    volumes:
+      - ../:/var/www/developers_social_network
+    env_file: 
+      - ./.env
+
+  nginx:
+    image: nginx:${NGINX_VERSION}
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+      - ../:/var/www/developers_social_network
+
+  mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PWD}
+      MYSQL_DATABASE: developers_social_network
+    volumes:
+      - ./mariadb/sql:/docker-entrypoint-initdb.d

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<ruleset name="DEVELOPERSSOCIALNETWORK">
+    <description>Mes règles de formattage</description>
+    <arg name="colors" />
+    <arg value="sp" />
+    <file>src</file>
+    <file>public/index.php</file>
+    <rule ref="PSR2" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+ </ruleset>
